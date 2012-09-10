@@ -3,7 +3,7 @@
 `iframe, object, embed` に対しては`CSS3`の`scale`を使用しているので中身が途切れたりすることなくフィットさせることができます。
 
 ##Demo
-* [Demo Page](http://fc2ist.github.com/jquery.iframe-fit/demo/)
+* [Demo Page](http://fc2ist.github.com/jquery.fit/demo/)
 
 ##Usage
 [jQuery throttle/debounce](http://benalman.com/projects/jquery-throttle-debounce-plugin/)と一緒に読み込ませて使用してください。
@@ -16,7 +16,10 @@
     // 解除
     $('.anime-text').fit('destroy');
 
-## Author
+##Support
+IE9~ and the others
+
+##Author
 Twitter: @moi_fc2  
 Blog: http://fc2ist.blog.fc2.com/
 

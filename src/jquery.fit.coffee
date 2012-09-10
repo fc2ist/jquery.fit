@@ -25,6 +25,8 @@ class Fit
       setGeneralStyle.apply(@)
       return
     
+    if !$.support.opacity then return
+    
     @target.on('destroy.fit', ->
       destroy.apply(self, [$(this)])
     )
