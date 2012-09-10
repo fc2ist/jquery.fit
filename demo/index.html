@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Demo - jQuery Animation Text</title>
+  <script type="text/javascript" src="../libs/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="../libs/jquery.ba-throttle-debounce.min.js"></script>
+  <script type="text/javascript" src="../jquery.fit.js"></script>
+  <style type="text/css">
+  .container {
+    min-width: 200px;
+    width: 90%;
+    margin: 100px auto;
+    padding: 0;
+    background-color: #000;
+  }
+  iframe {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  </style>
+</head>
+<body>
+	
+	<div class="container"><iframe src="iframe.html" width="700" height="200" frameborder="0" border="0"></iframe></div>
+	
+	<button id="fit">適用</button>
+	<button id="destroy">解除</button>
+	
+	<script type="text/javascript">
+  $(function() {
+    $('#fit').on('click', function(event) {
+      event.preventDefault();
+      $('iframe').fit({
+        'expand': true
+      });
+    });
+    $('#destroy').on('click', function(event) {
+      event.preventDefault();
+      $('iframe').fit('destroy');
+    })
+  });
+	</script>
+
+</body>
+</html>

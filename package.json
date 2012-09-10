@@ -1,0 +1,15 @@
+{
+  "name": "jquery.fit",
+  "title": "jQuery Fit",
+  "description": "要素を縦横比を維持しながら親要素の横幅にフィットさせるプラグインです。",
+  "version": "1.0.0",
+  "author": {
+    "name": "moi",
+    "twitter": "@moi_fc2"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
