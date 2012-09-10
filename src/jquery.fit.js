@@ -1,6 +1,6 @@
-(function() {
-  var Fit;
 
+(function($) {
+  var Fit;
   $.fn.fit = function(opt) {
     var def;
     def = {
@@ -20,8 +20,7 @@
       return elem.data('fit', (data = new Fit(elem, opt)));
     });
   };
-
-  Fit = (function() {
+  return Fit = (function() {
     var createStyle, destroy, generalStyle, resize, setGeneralStyle, vender;
 
     function Fit(target, opt) {
@@ -57,21 +56,21 @@
       var power, self, size, target;
       self = event.data.self;
       target = self.target;
-      resize.parent = resize.parent || target.parent();
+      self.parent = self.parent || target.parent();
       size = {
         'width': target.width(),
         'height': target.height()
       };
-      resize.margin = resize.margin || {
+      self.margin = self.margin || {
         'left': target.css('margin-left').replace('px', '') - 0,
         'top': target.css('margin-top').replace('px', '') - 0,
         'bottom': target.css('margin-bottom').replace('px', '') - 0
       };
-      power = resize.parent.width() / size.width;
+      power = self.parent.width() / size.width;
       if (power === 1 || (power > 1 && !self.opt.expand)) {
         return;
       }
-      return target.css(createStyle(resize.margin, size, power));
+      return target.css(createStyle(self.margin, size, power));
     };
 
     destroy = function(elem) {
@@ -121,5 +120,4 @@
     return Fit;
 
   })();
-
-}).call(this);
+})(jQuery);
