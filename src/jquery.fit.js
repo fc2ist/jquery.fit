@@ -35,6 +35,9 @@
         setGeneralStyle.apply(this);
         return;
       }
+      if (!$.support.opacity) {
+        return;
+      }
       this.target.on('destroy.fit', function() {
         return destroy.apply(self, [$(this)]);
       });

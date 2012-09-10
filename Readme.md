@@ -16,7 +16,10 @@
     // 解除
     $('.anime-text').fit('destroy');
 
-## Author
+##Support
+IE9~ and the others
+
+##Author
 Twitter: @moi_fc2  
 Blog: http://fc2ist.blog.fc2.com/
 

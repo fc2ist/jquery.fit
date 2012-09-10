@@ -1,4 +1,4 @@
-/*! jQuery Fit - v0.1.0 - 2012-09-10
+/*! jQuery Fit - v1.0.0 - 2012-09-10
 * Copyright (c) 2012 moi; Licensed MIT */
 
 (function() {
@@ -36,6 +36,9 @@
       tagname = this.target.get(0).tagName;
       if (!tagname.match(/^(iframe|object|embed)$/i)) {
         setGeneralStyle.apply(this);
+        return;
+      }
+      if (!$.support.opacity) {
         return;
       }
       this.target.on('destroy.fit', function() {
