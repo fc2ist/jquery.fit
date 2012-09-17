@@ -1,4 +1,4 @@
-/*! jQuery Fit - v1.0.1 - 2012-09-10
+/*! jQuery Fit - v1.0.1 - 2012-09-17
 * Copyright (c) 2012 moi; Licensed MIT */
 
 
@@ -45,7 +45,7 @@
       });
       $(window).on('resize', {
         'self': this
-      }, $.throttle(250, resize));
+      }, resize);
       resize({
         'data': {
           'self': this
@@ -57,6 +57,9 @@
 
     resize = function(event) {
       var power, self, size, target;
+      if (!event.data || !event.data.self) {
+        return;
+      }
       self = event.data.self;
       target = self.target;
       self.parent = self.parent || target.parent();
