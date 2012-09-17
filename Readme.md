@@ -6,21 +6,21 @@
 * [Demo Page](http://fc2ist.github.com/jquery.fit/demo/)
 
 ##Usage
-[jQuery throttle/debounce](http://benalman.com/projects/jquery-throttle-debounce-plugin/)と一緒に読み込ませて使用してください。
+~~~~~
+// 適用
+$('iframe').fit({
+  'expand': true // 拡大フィットさせたい場合
+});
 
-    // 適用
-    $('iframe').fit({
-      'expand': true // 拡大フィットさせたい場合
-    });
-    
-    // 解除
-    $('.anime-text').fit('destroy');
+// 解除
+$('.anime-text').fit('destroy');
+~~~~~
 
 ##Support
-IE9~ and the others
+IE9+ and the others
 
 ##Author
-Twitter: @moi_fc2  
+Twitter: @moi_fc2
 Blog: http://fc2ist.blog.fc2.com/
 
 ##License
