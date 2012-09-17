@@ -1,6 +1,3 @@
-/*! jQuery Fit - v1.0.2 - 2012-09-17
-* Copyright (c) 2012 moi; Licensed MIT */
-
 
 (function($) {
   var Fit;

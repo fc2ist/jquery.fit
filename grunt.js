@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-coffee');
-  
+
   // Project configuration.
   grunt.initConfig({
     pkg: '<json:package.json>',
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     },
     concat: {
       dist: {
-        src: ['<banner:meta.banner>', '<file_strip_banner:src/<%= pkg.name %>.js>'],
+        src: ['<banner:meta.banner>', '<file_strip_banner:js/<%= pkg.name %>.js>'],
         dest: '<%= pkg.name %>.js'
       }
     },
@@ -24,13 +24,13 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['src/<%= pkg.name %>.coffee'],
+      files: ['src/<%= pkg.name %>.coffee', 'package.json'],
       tasks: 'coffee concat min'
     },
     coffee: {
       dist: {
         src: ['src/*.coffee'],
-        dest: 'src/',
+        dest: 'js/',
         options: {
           bare: true
         }
