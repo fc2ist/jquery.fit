@@ -13,7 +13,7 @@ $('iframe').fit({
 });
 
 // 解除
-$('iframe').fit('destroy');
+$('.anime-text').fit('destroy');
 ~~~~~
 
 ##Support
