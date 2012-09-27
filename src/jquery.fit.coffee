@@ -7,7 +7,7 @@
       this.trigger('destroy.fit')
       return this
 
-    opt = $.extend(def, opt)
+    opt = $.extend(opt, def)
 
     return this.each(->
       elem = $(this)

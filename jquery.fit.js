@@ -1,4 +1,4 @@
-/*! jQuery Fit - v1.0.2 - 2012-09-17
+/*! jQuery Fit - v1.0.3 - 2012-09-28
 * Copyright (c) 2012 moi; Licensed MIT */
 
 
@@ -13,7 +13,7 @@
       this.trigger('destroy.fit');
       return this;
     }
-    opt = $.extend(def, opt);
+    opt = $.extend(opt, def);
     return this.each(function() {
       var data, elem;
       elem = $(this);
